@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styles/home.css';
 import profileImg from '../images/profile1.jpg';
+import { FaLinkedin, FaGithub, FaInstagram, FaFacebook } from 'react-icons/fa';
 
 const Home = () => {
   return (
@@ -16,6 +17,20 @@ const Home = () => {
             Passionate full-stack developer with expertise in creating modern web applications.
             Specialized in React, Node.js, and responsive web design.
           </p>
+          <div className="social-icons">
+            <a href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer">
+              <FaLinkedin />
+            </a>
+            <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer">
+              <FaGithub />
+            </a>
+            <a href="https://instagram.com/your-profile" target="_blank" rel="noopener noreferrer">
+              <FaInstagram />
+            </a>
+            <a href="https://facebook.com/your-profile" target="_blank" rel="noopener noreferrer">
+              <FaFacebook />
+            </a>
+          </div>
           <div className="cta-buttons">
             <button className="btn-primary">Learn More</button>
             <button className="btn-secondary">Hire Me</button>

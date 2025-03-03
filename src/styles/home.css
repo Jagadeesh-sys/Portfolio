@@ -3,7 +3,22 @@
   margin: 0 auto;
   padding: 2rem;
 }
+.social-icons {
+  display: flex;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
 
+.social-icons a {
+  color: #333;
+  font-size: 1.8rem;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #22c55e;
+  transform: translateY(-3px);
+}
 .hero-section {
   display: flex;
   align-items: center;
