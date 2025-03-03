@@ -1,0 +1,106 @@
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+.about-header h1 {
+  color: #27ae60;
+}
+.about-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+.profile-image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+.skills {
+  margin-top: 2rem;
+}
+
+.skills ul {
+  .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+  }
+  .skills-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem 0;
+    list-style: none;
+    margin: 0;
+    overflow-x: auto;
+  }
+  .skills-list li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+  .skill-icon {
+    font-size: 1.8rem;
+    color: #333;
+  }
+  .skills-list li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+  .skills-list li:hover .fa-html5 { color: #E44D26; }
+  .skills-list li:hover .fa-css3-alt { color: #264DE4; }
+  .skills-list li:hover .fa-js { color: #F7DF1E; }
+  .skills-list li:hover .fa-python { color: #3776AB; }
+  .skills-list li:hover .fa-node-js { color: #339933; }
+  .skill-icon {
+    font-size: 1.5rem;
+    color: #333;
+  }
+  /* Optional: Add hover effect */
+  .skills-list li:hover {
+    transform: translateY(-2px);
+    transition: transform 0.2s ease;
+    background-color: #e0e0e0;
+  }
+  margin-top: 1rem;
+}
+.skills-wrapper {
+  overflow-x: auto;
+  padding: 1rem 0;
+}
+.skills-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  min-width: max-content;
+}
+.skills-list li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background-color: #f5f5f5;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}

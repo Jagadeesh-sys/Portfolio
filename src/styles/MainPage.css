@@ -1,0 +1,14 @@
+.main-page {
+  scroll-behavior: smooth;
+}
+
+.main-page section {
+  min-height: 100vh;
+  padding-top: 0; /* Account for fixed navbar */
+}
+
+.projects-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
