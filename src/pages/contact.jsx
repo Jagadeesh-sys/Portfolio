@@ -1,10 +1,64 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../styles/contact.css';
-import { FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaCheckCircle } from 'react-icons/fa';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    from_name: '',
+    from_email: '',
+    subject: '',
+    message: ''
+  });
+  const [showAlert, setShowAlert] = useState(false);  // Add this line
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    
+    try {
+      await emailjs.send(
+        'service_0ffkxmk',
+        'template_rr9p9qg',
+        formData,
+        '5qnhWDK2Y9H7qLdKj'
+      );
+      
+      setShowAlert(true);  // Replace alert with this
+      setTimeout(() => {
+        setShowAlert(false);
+      }, 3000);
+
+      setFormData({
+        from_name: '',
+        from_email: '',
+        subject: '',
+        message: ''
+      });
+    } catch (error) {
+      console.error('Error sending email:', error);
+      alert('Failed to send message. Please try again.');
+    }
+  };
+
   return (
     <div className="contact-container">
+      {showAlert && (
+        <div className="alert alert-success">
+          {showAlert && (
+            <div className="alert alert-success">
+              <FaCheckCircle className="alert-icon" /> Your Message Sent Successfully!
+            </div>
+          )}
+        </div>
+      )}
+      
       <div className="contact-header">
         <h1>Get In Touch</h1>
         <p className="subtitle">Let's discuss your project</p>
@@ -12,18 +66,45 @@ const Contact = () => {
       
       <div className="contact-content">
         <div className="contact-form">
-          <form>
+          <form onSubmit={handleSubmit}>
             <div className="form-group">
-              <input type="text" placeholder="Your Name" required />
+              <input
+                type="text"
+                name="from_name"
+                value={formData.from_name}
+                onChange={handleChange}
+                placeholder="Your Name"
+                required
+              />
             </div>
             <div className="form-group">
-              <input type="email" placeholder="Your Email" required />
+              <input
+                type="email"
+                name="from_email"
+                value={formData.from_email}
+                onChange={handleChange}
+                placeholder="Your Email"
+                required
+              />
             </div>
             <div className="form-group">
-              <input type="text" placeholder="Subject" required />
+              <input
+                type="text"
+                name="subject"
+                value={formData.subject}
+                onChange={handleChange}
+                placeholder="Subject"
+                required
+              />
             </div>
             <div className="form-group">
-              <textarea placeholder="Your Message" required></textarea>
+              <textarea
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                placeholder="Your Message"
+                required
+              ></textarea>
             </div>
             <button type="submit" className="submit-btn">Send Message</button>
           </form>

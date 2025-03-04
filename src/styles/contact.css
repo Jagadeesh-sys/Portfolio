@@ -50,7 +50,43 @@
   height: 120px;  /* Reduced from 150px */
   resize: vertical;
 }
+/* Update or add these alert styles */
+.alert {
+  padding: 12px 25px;
+  border-radius: 30px;
+  animation: fadeIn 0.5s ease-in-out;
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
 
+.alert-icon {
+  font-size: 1.1rem;
+  color: #155724;
+}
+
+.alert-success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
 .submit-btn {
   padding: 10px 20px;  /* Reduced from 15px 30px */
   font-size: 0.9rem;  /* Reduced from 1rem */

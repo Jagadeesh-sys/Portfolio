@@ -16,7 +16,7 @@ const Projects = () => {
       description: "A comprehensive music management web application built with Django. Features include playlist creation, music playback, user authentication, and a responsive interface for seamless music organization.",
       tech: ["HTML", "CSS", "Django", "Python", "SQLite"],
       github: "https://github.com/Jagadeesh-sys/MusicWeb-Django",
-      demo: "https://musicweb-demo.herokuapp.com",
+      demo: null,
       image: musicImage
     },
     {
@@ -32,7 +32,7 @@ const Projects = () => {
       description: "Advanced plant disease detection system using YOLOv8. Helps farmers and gardeners identify plant diseases through image recognition. Includes a comprehensive database of common plant diseases.",
       tech: ["Python", "YOLOv8", "Machine Learning", "OpenCV"],
       github: "https://github.com/Jagadeesh-sys/Plant-Disease-Detection-Using-YOLOv8",
-      demo: "https://plant-disease-demo.netlify.app",
+      demo: null,
       image: plantImage
     },
     {
@@ -63,7 +63,7 @@ const Projects = () => {
   };
 
   return (
-    <div className="projects-container">
+    <div className="projects-container" style={{ marginBottom: '1rem' }}>  {/* Reduced from 2rem */}
       <div className="projects-header">
         <h1>My Projects</h1>
         <p className="subtitle">Showcasing my technical expertise through real-world applications</p>

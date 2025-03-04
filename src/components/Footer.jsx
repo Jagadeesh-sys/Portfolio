@@ -10,7 +10,7 @@ const Footer = () => {
           <a href="https://github.com/Jagadeesh-sys" target="_blank" rel="noopener noreferrer">
             <FaGithub />
           </a>
-          <a href="https://www.linkedin.com/in/jagadeesh-koppisetti" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.linkedin.com/in/jagadeesh-koppisetti-173701261/" target="_blank" rel="noopener noreferrer">
             <FaLinkedin />
           </a>
           <a href="mailto:koppisettijagadeesh123@gmail.com">
