@@ -24,10 +24,10 @@ const Contact = () => {
     
     try {
       await emailjs.send(
-        'service_0ffkxmk',
-        'template_rr9p9qg',
+        'Your_Service_id',
+        'Your_templete_id',
         formData,
-        '5qnhWDK2Y9H7qLdKj'
+        'Your_PublicKey'
       );
       
       setShowAlert(true);  // Replace alert with this
