@@ -117,14 +117,14 @@ const Contact = () => {
               <FaEnvelope className="info-icon" />
               <div>
                 <h4>Email</h4>
-                <p>koppisettijagadeesh123@gmail.com.com</p>
+                <p>koppisettijagadeesh@gmail.com.com</p>
               </div>
             </div>
             <div className="info-item">
               <FaPhone className="info-icon" />
               <div>
                 <h4>Phone</h4>
-                <p>+91 9347720473</p>
+                <p>+91 99999999999</p>
               </div>
             </div>
             <div className="info-item">
