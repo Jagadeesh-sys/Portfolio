@@ -1,15 +1,15 @@
 import React from 'react';
 import '../styles/home.css';
-import profileImg from '../images/profile1.jpg';
+import profileImg from '../images/about-image2.jpg';
 import { FaLinkedin, FaGithub, FaInstagram, FaFacebook } from 'react-icons/fa';
-import resumePDF from '../images/Jagadeesh Resume .pdf';
+import resumePDF from '../images/JagadeeshResume new.pdf';
 
 const Home = () => {
   const handleDownload = () => {
     // Create a link element
     const link = document.createElement('a');
     link.href = resumePDF;
-    link.download = 'Jagadeesh_Resume.pdf';
+    link.download = 'JagadeeshResume new.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -21,13 +21,14 @@ const Home = () => {
         <div className="content-left">
           <span className="subtitle">GET EVERY SINGLE SOLUTIONS.</span>
           <h1 className="title">
-            I'm Developer<br />
+            I'm Java Developer<br />
             <span className="name">Jagadeesh Koppisetti</span>
           </h1>
           <p className="description">
-            Passionate web developer with expertise in creating modern web applications.
-            Specialized in React, Node.js, and responsive web design.
+            I turn ideas into interactive experiences — blending Java’s power, React’s flexibility, 
+            and Node.js’s speed to craft modern, responsive web applications.
           </p>
+
           <div className="social-icons">
             <a href="https://www.linkedin.com/in/jagadeesh-koppisetti-173701261/" target="_blank" rel="noopener noreferrer">
               <FaLinkedin />
@@ -53,14 +54,7 @@ const Home = () => {
         </div>
       </div>
       
-      <div className="features-section">
-        <div className="feature">
-          <h2>Developing With Passion While Exploring New Technologies.</h2>
-        </div>
-        <div className="feature">
-          <h2>Any Type Of Query & Discussion.</h2>
-        </div>
-      </div>
+      
     </div>
   );
 };
