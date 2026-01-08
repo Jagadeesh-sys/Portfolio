@@ -1,7 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
+
+:root {
+  --text-reverse: #000;
+  --background-reverse: #fff;
+  --primaryBg: #1a1a1a;
+  --primaryHi: #333;
+  --primaryFg: #fff;
+  --accentBg: #00bcd4;
+  --accentHi: #00e5ff;
+  --accentFg: #000;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+
+  font-family: -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    'Roboto',
+    'Oxygen',
+    'Ubuntu',
+    'Cantarell',
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -10,4 +32,23 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* Global light background and layout helpers */
+/* Global dark background and layout helpers */
+html,
+body,
+#root {
+  min-height: 100%;
+  background-color: #000;
+  color: #fff;
+  /* white text */
+  overflow-x: hidden;
+}
+
+/* Make inner containers transparent */
+.App,
+.main-page,
+.main-page section {
+  background: transparent;
 }

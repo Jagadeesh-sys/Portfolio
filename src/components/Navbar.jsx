@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/Navbar.css';
-import logo from '../images/logo (2).png';
+import logo from '../images/logo.png';
 
 const Navbar = () => {
   const scrollToSection = (sectionId) => {
@@ -11,10 +11,10 @@ const Navbar = () => {
   const handleConnectClick = () => {
     // Option 1: Scroll to contact form
     scrollToSection('contact');
-    
+
     // Option 2: Open email client
     // window.location.href = 'mailto:your.email@example.com';
-    
+
     // Option 3: Open modal with contact options
     // setIsModalOpen(true);
   };

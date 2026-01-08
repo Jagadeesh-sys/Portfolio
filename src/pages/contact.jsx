@@ -51,11 +51,7 @@ const Contact = () => {
     <div className="contact-container">
       {showAlert && (
         <div className="alert alert-success">
-          {showAlert && (
-            <div className="alert alert-success">
-              <FaCheckCircle className="alert-icon" /> Your Message Sent Successfully!
-            </div>
-          )}
+          <FaCheckCircle className="alert-icon" /> Your Message Sent Successfully!
         </div>
       )}
       

@@ -3,14 +3,15 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: #ffffff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #000;
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .nav-brand {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #1a1b3a;
+  color: #fff;
   display: flex;
   align-items: center;
 }
@@ -25,6 +26,7 @@
     height: 32px;
   }
 }
+
 .nav-links {
   display: flex;
   list-style: none;
@@ -35,33 +37,75 @@
 
 .nav-button {
   padding: 0.5rem 1.5rem;
-  background-color: #22c55e;  /* Brighter green */
-  color: white;
-  border: none;
+  background-color: transparent;
+  color: #00bcd4;
+  border: 1px solid #00bcd4;
   border-radius: 4px;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 2px 4px rgba(34, 197, 94, 0.2);
+  box-shadow: 0 0 10px rgba(0, 188, 212, 0.2);
 }
 
 .nav-button:hover {
-  background-color: #16a34a;  /* Darker green on hover */
-  box-shadow: 0 4px 6px rgba(34, 197, 94, 0.3);
+  background-color: #00bcd4;
+  color: #000;
+  box-shadow: 0 0 20px rgba(0, 188, 212, 0.4);
   transform: translateY(-1px);
 }
 
 .nav-links li a {
+  position: relative;
+  display: inline-block;
   text-decoration: none;
-  color: #333;
+  color: #fff;
   font-weight: 500;
-  transition: color 0.3s ease;
+  padding: 0.4rem 0.75rem;
+  border-radius: 8px;
+  transition: color 0.25s ease, background-color 0.25s ease, transform 0.2s ease;
 }
 
 .nav-links li a:hover {
-  color: #006400;  /* Changed from #ff6b6b to darker green for hover effect */
+  color: #00bcd4;
+  background-color: rgba(255, 255, 255, 0.05);
+  transform: translateY(-1px);
 }
-/* Add these styles to your existing Navbar.css */
+
+/* Animated underline */
+.nav-links li a::after {
+  content: '';
+  position: absolute;
+  left: 0.75rem;
+  right: 0.75rem;
+  bottom: -4px;
+  height: 2px;
+  background-color: #00bcd4;
+  border-radius: 2px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+.nav-links li a:hover::after {
+  transform: scaleX(1);
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+
+  .nav-links li a,
+  .nav-button {
+    transition: none !important;
+  }
+
+  .nav-links li a:hover {
+    transform: none;
+  }
+
+  .nav-links li a::after {
+    transition: none;
+  }
+}
 
 .hamburger {
   display: none;
@@ -74,7 +118,7 @@
   height: 3px;
   margin: 5px auto;
   transition: all 0.3s ease-in-out;
-  background-color: #333;
+  background-color: #fff;
 }
 
 @media (max-width: 768px) {
@@ -100,11 +144,12 @@
     top: 70px;
     gap: 0;
     flex-direction: column;
-    background-color: white;
+    background-color: #111;
     width: 100%;
     text-align: center;
     transition: 0.3s;
-    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.5);
+    border-bottom: 1px solid #333;
   }
 
   .nav-links.active {
@@ -116,9 +161,11 @@
   }
 
   .nav-button {
-    display: none; /* Hide the button on mobile */
+    display: none;
+    /* Hide the button on mobile */
   }
 }
+
 @media (max-width: 768px) {
   .navbar {
     flex-direction: row;

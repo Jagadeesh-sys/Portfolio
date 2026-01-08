@@ -1,0 +1,294 @@
+.tech-stack {
+    min-height: 100vh;
+    display: flex;
+    padding: 2rem 4rem;
+}
+
+
+.tech-stack-left-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    margin-top: 6rem;
+}
+
+.tech-stack .title {
+    margin-top: 0;
+    /* Margin handled by column, or keep it if specific spacing needed */
+    align-items: flex-end;
+}
+
+.tech-stack>div {
+    width: 50%;
+    padding: 1rem;
+}
+
+.tech-stack p {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    line-height: 1.5rem;
+}
+
+.tech-row {
+    display: flex;
+    gap: 1rem;
+    margin: 20px 0px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tech-grid {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    font-family: 'Fugaz One', sans-serif;
+}
+
+@media screen and (max-width: 700px) {
+    .tech-stack {
+        padding: 1rem 2rem;
+        flex-direction: column-reverse;
+        gap: 1rem;
+    }
+
+    .tech-stack>div {
+        width: 100%;
+        padding: 0.5rem;
+    }
+
+    .tech-stack .title {
+        margin-top: 2rem;
+        text-align: center;
+    }
+
+    .tech-stack p {
+        font-size: 1.1rem;
+        line-height: 1.5rem;
+    }
+
+    .tech-row {
+        gap: 0.5rem;
+    }
+}
+
+/* User Provided Component Styles */
+
+.glow-box-parent {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.glow-box-title {
+    position: absolute;
+    top: 0;
+    font-size: 0.9rem;
+    padding: 0.2rem 0.7rem;
+    white-space: nowrap;
+    color: var(--text-reverse);
+    border-radius: 50px;
+    background-color: var(--background-reverse);
+    box-shadow:
+        0 15px 35px rgba(50, 50, 93, 0.1),
+        0 5px 15px rgba(0, 0, 0, 0.07);
+
+    pointer-events: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+}
+
+.glow-box-parent:hover .glow-box-title {
+    top: -50%;
+    opacity: 0.9;
+}
+
+.glow-box {
+    height: 4.2rem;
+    width: 4.2rem;
+    border-radius: 10px;
+    box-shadow:
+        inset 0px 0px 1px 0px var(--clr),
+        inset 0px 0px 8px 0px var(--clr);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition-duration: 300ms;
+}
+
+.glow-box::before {
+    position: absolute;
+    content: '';
+    bottom: -60%;
+    height: 70%;
+    border-radius: 100%;
+    width: 70%;
+    background-color: var(--clr);
+    filter: blur(10px);
+}
+
+.glow-box::after {
+    position: absolute;
+    content: '';
+    height: 40%;
+    width: 40%;
+    border-radius: 100%;
+    opacity: 80%;
+    background-color: var(--clr);
+    filter: blur(7px);
+}
+
+.glow-box:hover {
+    box-shadow:
+        inset 0px 0px 1px 0px var(--clr),
+        inset 0px 0px 8px 0px var(--clr),
+        0px 0px 7px 1px var(--clr);
+}
+
+.glow-link:hover {
+    transform: translateY(-7px);
+}
+
+.glow-box:hover::before {
+    bottom: -47%;
+}
+
+.glow-box>svg {
+    width: 50%;
+    height: 50%;
+}
+
+@keyframes glow-box-anim {
+    0% {
+        transform: translateY(100px);
+    }
+
+    80% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .glow-box {
+        height: 3.5rem;
+        width: 3.5rem;
+    }
+
+    .glow-box-title {
+        font-size: 0.75rem;
+        padding: 0.15rem 0.5rem;
+    }
+}
+
+/* Floating Button Styles */
+.floating-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    text-decoration: none;
+    color: inherit;
+    height: 50px;
+    width: 160px;
+    z-index: 9999;
+    background-color: transparent;
+    outline: none;
+    border: none;
+}
+
+.floating-btn div {
+    height: 50px;
+    width: 160px;
+    border: none;
+    border-radius: 13px;
+    background-color: var(--primaryBg);
+    box-shadow: 0px -3px 15px 0px var(--primaryHi) inset;
+    color: var(--primaryFg);
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transform: translateY(0px);
+    transition: all 0.2s ease;
+    animation: anim 5s linear infinite;
+}
+
+.floating-btn span {
+    width: 100px;
+    height: 60px;
+    background-color: var(--primaryHi);
+    border-radius: 100%;
+    filter: blur(20px);
+    position: absolute;
+    bottom: -50%;
+    transition: all 0.2s ease;
+}
+
+.floating-btn:hover>span {
+    bottom: -40%;
+    filter: blur(18px);
+    scale: 1.2;
+}
+
+.floating-btn:hover>div {
+    transform: translateY(5px);
+}
+
+.floating-btn.first {
+    top: 12%;
+    left: 15%;
+}
+
+.floating-btn.first>div {
+    background-color: var(--accentBg);
+    box-shadow: 0px -3px 15px 0px var(--accentHi) inset;
+}
+
+.floating-btn.first>span {
+    background-color: hsla(200, 88%, 46%, 0.475);
+}
+
+.floating-btn.sec {
+    bottom: 20%;
+    right: 15%;
+}
+
+.floating-btn.sec>button {
+    background-color: var(--accentBg);
+    box-shadow: 0px -3px 15px 0px var(--accentHi) inset;
+    color: var(--accentFg);
+}
+
+.floating-btn.sec>span {
+    background-color: var(--accentHi);
+}
+
+/* Missing Keyframe for Floating Button */
+@keyframes anim {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}

@@ -1,15 +1,14 @@
 import React from 'react';
 import '../styles/home.css';
-import profileImg from '../images/about-image2.jpg';
-import { FaLinkedin, FaGithub, FaInstagram, FaFacebook } from 'react-icons/fa';
-import resumePDF from '../images/JagadeeshResume new.pdf';
+import { FaLinkedin, FaGithub, FaInstagram, FaFacebook, FaMeteor } from 'react-icons/fa';
+import resumePDF from '../images/JagadeeshResume.pdf';
+import myPhoto from '../images/myphoto1.png';
 
 const Home = () => {
   const handleDownload = () => {
-    // Create a link element
     const link = document.createElement('a');
     link.href = resumePDF;
-    link.download = 'JagadeeshResume new.pdf';
+    link.download = 'JagadeeshResume.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -18,16 +17,20 @@ const Home = () => {
   return (
     <div className="home-container">
       <div className="hero-section">
-        <div className="content-left">
-          <span className="subtitle">GET EVERY SINGLE SOLUTIONS.</span>
-          <h1 className="title">
-            I'm Java Developer<br />
-            <span className="name">Jagadeesh Koppisetti</span>
-          </h1>
-          <p className="description">
-            I turn ideas into interactive experiences — blending Java’s power, React’s flexibility, 
-            and Node.js’s speed to craft modern, responsive web applications.
-          </p>
+        <div className="hero-content">
+          <h2 className="greeting">Hi, I am</h2>
+          <h3 className="role-title">Koppisetti</h3>
+          <div className="name-wrapper">
+            <FaMeteor className="meteor-icon" />
+            <h1 className="main-name bouncing-name">
+              {"JAGADEESH".split("").map((char, index) => (
+                <span key={index} className="bouncing-letter" style={{ animationDelay: `${index * 0.1}s` }}>
+                  {char}
+                </span>
+              ))}
+            </h1>
+          </div>
+          <h3 className="role-title">Full Stack Developer</h3>
 
           <div className="social-icons">
             <a href="https://www.linkedin.com/in/jagadeesh-koppisetti-173701261/" target="_blank" rel="noopener noreferrer">
@@ -43,18 +46,18 @@ const Home = () => {
               <FaFacebook />
             </a>
           </div>
+
           <div className="cta-buttons">
             <button className="btn-primary" onClick={handleDownload}>
               Download CV
             </button>
           </div>
         </div>
+
         <div className="hero-image">
-          <img src={profileImg} alt="Koppisetti Jagadeesh" />
+          <img src={myPhoto} alt="Jagadeesh Koppisetti" className="profile-photo" />
         </div>
       </div>
-      
-      
     </div>
   );
 };

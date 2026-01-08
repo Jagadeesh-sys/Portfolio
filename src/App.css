@@ -32,7 +32,66 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
+  }
+}
+
+/* Global Component Styles */
+
+/* Global Component Styles */
+/* Styles for SectionTitle and GlowBox are now in TechStack.css */
+
+/* Global Title Styles (Sticky, Overlap, Fugaz One) */
+:root {
+  --text-primary: 8rem;
+  --text-secondary: 11rem;
+}
+
+.title {
+  text-align: center;
+  padding: 2rem;
+  width: fit-content;
+  position: sticky;
+  top: 50vh;
+}
+
+.title .primary-text {
+  color: white;
+  font-size: var(--text-primary);
+  margin-bottom: 0;
+  position: relative;
+  z-index: 0;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  font-family: 'Fugaz One', sans-serif;
+}
+
+.title .secondary-text {
+  font-size: var(--text-secondary);
+  text-align: end;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  font-family: 'Fugaz One', sans-serif;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: hsl(196, 100%, 56%);
+  position: relative;
+  z-index: 1;
+  margin-top: -5rem;
+  /* Force overlap */
+  /* text-shadow: 0 0 10px rgba(0, 188, 212, 0.4); */
+}
+
+@media screen and (max-width: 700px) {
+  :root {
+    --text-primary: 5rem;
+    --text-secondary: 6rem;
+  }
+
+  .title {
+    position: relative;
+    top: 0rem;
   }
 }

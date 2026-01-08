@@ -1,144 +1,183 @@
-.about-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 3rem 2rem;
-}
-.about-header h1 {
-  color: #27ae60;
-}
-.about-header {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-.about-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  align-items: center;
-}
-.profile-image {
-  width: 100%;
-  max-width: 400px;
-  height: auto;
-}
-.skills {
-  margin-top: 2rem;
+.intro-box .intro-subtitle {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+  font-family: 'Fugaz One', cursive;
 }
 
-.skills ul {
-  .skills-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    list-style: none;
-    padding: 0;
-  }
-  .skills-list {
-    display: grid;
-    grid-template-columns: repeat(5, minmax(60px, 1fr));
-    justify-items: center;
-    align-items: center;
-    gap: 1.25rem;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    min-width: 0;
-  }
-  .skills-list li {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column; /* stack icon above label */
-    gap: 0.4rem;
-    width: 80px;
-    height: auto; /* allow label to fit */
-    padding: 0.5rem 0.25rem;
-    background-color: #f5f5f5;
-    border-radius: 12px;
-    transition: all 0.3s ease;
-  }
-  .skill-icon {
-    font-size: 1.8rem;
-    color: inherit; /* allow per-tech color classes to take effect */
-  }
-  .skills-list li:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  }
-  .skill-icon {
-    font-size: 1.5rem;
-    color: inherit; /* allow per-tech color classes to take effect */
-  }
-  /* Optional: Add hover effect */
-  .skills-list li:hover {
-    transform: translateY(-2px);
-    transition: transform 0.2s ease;
-    background-color: #e0e0e0;
-  }
-  margin-top: 1rem;
+.intro-name {
+  font-size: 3rem;
+  color: #00bcd4;
+  font-family: 'Fugaz One', cursive;
+  margin: 0.5rem 0;
 }
-.skills-wrapper {
-  overflow-x: auto;
-  padding: 1rem 0;
+
+.intro-role {
+  font-size: 1.8rem;
+  color: #fff;
+  margin-bottom: 1.5rem;
+  font-family: 'Fugaz One', cursive;
 }
-.skills-list {
-  display: grid;
-  grid-template-columns: repeat(5, minmax(60px, 1fr));
-  justify-items: center;
-  align-items: center;
-  gap: 1.25rem;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  min-width: 0;
-}
-.skills-list li {
+
+.about-me-section {
+  padding: 4rem 2rem;
+  /* Radial gradient for the blue glow background effect */
+  background: radial-gradient(circle at center, rgba(0, 188, 212, 0.15) 0%, rgba(0, 100, 120, 0.08) 30%, #000 60%);
+  color: #fff;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column; /* stack icon above label */
-  gap: 0.4rem;
-  width: 80px;
-  height: auto; /* allow label to fit */
-  padding: 0.5rem 0.25rem;
-  background-color: #f5f5f5;
+}
+
+.about-content-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 4rem;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.about-left-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  /* Align title to the right side of the left column next to content */
+  justify-content: flex-start;
+  padding-top: 2rem;
+  position: relative;
+}
+
+.about-right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.intro-box {
+  background: #020c1b;
+  /* Dark navy card background */
+  border: none;
+  padding: 2.5rem;
   border-radius: 12px;
-  transition: all 0.3s ease;
-}
-
-/* Brand colors for Technical Skills icons */
-.skills .skills-list .skill-icon.icon-html { color: #E34F26 !important; }
-.skills .skills-list .skill-icon.icon-css { color: #1572B6 !important; }
-.skills .skills-list .skill-icon.icon-js { color: #F7DF1E !important; }
-.skills .skills-list .skill-icon.icon-react { color: #61DAFB !important; }
-.skills .skills-list .skill-icon.icon-java { color: #007396 !important; }
-.skills .skills-list .skill-icon.icon-spring { color: #6DB33F !important; }
-.skills .skills-list .skill-icon.icon-python { color: #3776AB !important; }
-.skills .skills-list .skill-icon.icon-c { color: #A8B9CC !important; }
-.skills .skills-list .skill-icon.icon-node { color: #339933 !important; }
-.skills .skills-list .skill-icon.icon-sql { color: #00758F !important; }
-
-/* Tools */
-.skills .skills-list .skill-icon.icon-git { color: #F05032 !important; }
-.skills .skills-list .skill-icon.icon-github { color: #181717 !important; }
-.skills .skills-list .skill-icon.icon-vscode { color: #007ACC !important; }
-.skills .skills-list .skill-icon.icon-eclipse { color: #2C2255 !important; }
-.skills .skills-list .skill-icon.icon-bootstrap { color: #7952B3 !important; }
-.skills .skills-list .skill-icon.icon-netlify { color: #00C7B7 !important; }
-
-/* Optional: subtle emphasis on hover */
-.skills-list li:hover .skill-icon { filter: brightness(1.05); }
-
-/* Label under each icon */
-.skill-label {
-  font-size: 0.72rem;
-  line-height: 1;
-  color: #333;
+  position: relative;
   text-align: center;
+  /* Center align text like the reference */
+  box-shadow: 0 10px 30px -10px rgba(2, 12, 27, 0.7);
+  max-width: 800px;
+  /* Optional constraint for readability */
+  margin: 0 auto;
+  /* Center the box itself if container allows */
 }
 
-/* Tighter spacing for paragraph text in the About section */
-.about-text p {
-  margin-top: 0.5rem;
-  margin-bottom: 0.75rem;
+.intro-box p {
+  margin-bottom: 1.2rem;
+  line-height: 1.6;
+  color: #a8b2d1;
+  /* Softer text color for contrast */
+  font-size: 1.1rem;
+}
+
+.intro-greeting {
+  font-size: 1.5rem;
+  /* Larger greeting */
+  color: #ccd6f6 !important;
+  /* Brighter heading color */
+  font-weight: 600;
+  margin-bottom: 2rem !important;
+}
+
+.intro-box strong {
+  color: #64ffda;
+  /* Bright cyan/green highlight */
+  font-weight: normal;
+  /* Often these highlights look better normal weight if color is bright, or keep bold */
+  color: #00bcd4;
+  /* Keeping existing cyan theme */
+}
+
+.timeline-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.timeline-heading {
+  font-size: 2rem;
+  font-weight: 800;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.timeline-item {
+  border-left: 2px solid #00bcd4;
+  padding-left: 1.5rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -6px;
+  /* Center circle on the line (2px line, 10px circle -> -4px offset + adjustment) */
+  top: 0;
+  width: 10px;
+  height: 10px;
+  background-color: #000;
+  border: 2px solid #00bcd4;
+  border-radius: 50%;
+}
+
+.designation {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  color: #fff;
+}
+
+.place {
+  font-size: 0.9rem;
+  color: #00bcd4;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.timeline-description ul {
+  padding-left: 1rem;
+  margin: 0;
+}
+
+.timeline-description li {
+  margin-bottom: 0.5rem;
+  color: #ccc;
+}
+
+/* Decoration */
+.decoration-dots {
+  margin-top: 2rem;
+  opacity: 0.5;
+  /* Ideally background image of dots, simplified here */
+}
+
+.meteor-icon-small {
+  color: #fff;
+  font-size: 1.5rem;
+  transform: rotate(-45deg);
+}
+
+@media (max-width: 900px) {
+  .about-content-wrapper {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .about-left-column {
+    align-items: center;
+    padding-top: 0;
+  }
 }

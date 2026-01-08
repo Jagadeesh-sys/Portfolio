@@ -6,11 +6,21 @@ import musicImage from '../images/music.png';
 import plantImage from '../images/plant.png';
 import mathvizImage from '../images/mathviz.png';
 import weatherImage from '../images/weather.png';
+import AgroLinkImage from '../images/AgroLink.png';
+
 
 const Projects = () => {
   const [expandedProjects, setExpandedProjects] = useState([]);
 
   const projects = [
+    {
+      title: "AgroLink Farmer Marketplace",
+      description: "A digital marketplace connecting farmers directly with buyers. Features real-time listings, secure transactions, and a robust backend. Deployed on Railway for high availability.",
+      tech: ["Java", "Servlets", "JDBC", "MySQL", "React", "Docker", "Railway"],
+      github: "https://github.com/Jagadeesh-sys/AgroLink-Farmer-MarketPlace",
+      demo: "https://agrolink-farmer-marketplace-production.up.railway.app/",
+      image: AgroLinkImage
+    },
     {
       title: "MusicWeb-Django",
       description: "A comprehensive music management web application built with Django. Features include playlist creation, music playback, user authentication, and a responsive interface for seamless music organization.",
@@ -68,7 +78,7 @@ const Projects = () => {
         <h1>My Projects</h1>
         <p className="subtitle">Showcasing my technical expertise through real-world applications</p>
       </div>
-      
+
       <div className="projects-grid">
         {projects.map((project, index) => (
           <div className="project-card" key={index}>
@@ -87,26 +97,23 @@ const Projects = () => {
               ))}
             </div>
             <div className="project-links">
-              <a href={project.github} 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="project-link github">
-                <div className="github-link-content">
-                  <FaGithub className="github-icon" />
-                  <span className="code-text">Code</span>
-                </div>
+              <a href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-btn code-btn">
+                <FaGithub /> Code
               </a>
               {project.demo && (
-                <a href={project.demo} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="project-link demo">
+                <a href={project.demo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="project-btn demo-btn">
                   <FaExternalLinkAlt /> Live Demo
                 </a>
               )}
-              <button 
+              <button
                 onClick={() => toggleProjectDescription(index)}
-                className="view-more-btn"
+                className="project-btn view-btn"
               >
                 {expandedProjects.includes(index) ? 'View Less' : 'View More'}
               </button>
