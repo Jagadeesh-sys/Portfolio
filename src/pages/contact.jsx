@@ -21,7 +21,7 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     try {
       await emailjs.send(
         'Your_Service_id',
@@ -29,7 +29,7 @@ const Contact = () => {
         formData,
         'Your_PublicKey'
       );
-      
+
       setShowAlert(true);  // Replace alert with this
       setTimeout(() => {
         setShowAlert(false);
@@ -54,12 +54,12 @@ const Contact = () => {
           <FaCheckCircle className="alert-icon" /> Your Message Sent Successfully!
         </div>
       )}
-      
+
       <div className="contact-header">
         <h1>Get In Touch</h1>
         <p className="subtitle">Let's discuss your project</p>
       </div>
-      
+
       <div className="contact-content">
         <div className="contact-form">
           <form onSubmit={handleSubmit}>
@@ -105,7 +105,7 @@ const Contact = () => {
             <button type="submit" className="submit-btn">Send Message</button>
           </form>
         </div>
-        
+
         <div className="contact-info">
           <h3>Contact Information</h3>
           <div className="info-items">
