@@ -19,6 +19,7 @@ import {
     SiPycharm,
     SiEclipseide,
     SiMysql,
+    SiPostman,
 } from 'react-icons/si';
 
 import { TbBrandVscode } from 'react-icons/tb';
@@ -58,6 +59,8 @@ const techs = [
             { title: 'PyCharm', icon: <SiPycharm />, color: '#21d789' },
             { title: 'Jupyter', icon: <SiJupyter />, color: '#f37626' },
             { title: 'Eclipse', icon: <SiEclipseide />, color: '#2c2255' },
+            { title: 'STS', icon: <SiSpringboot />, color: '#6db33f' },
+            { title: 'Postman', icon: <SiPostman />, color: '#FF6C37' },
             { title: 'Power BI', icon: <FaMicrosoft />, color: '#f2c811' },
         ],
     },

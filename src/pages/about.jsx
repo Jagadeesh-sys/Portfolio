@@ -19,13 +19,13 @@ const About = () => {
         <div className="about-right-column">
           <div className='intro-box'>
             <p className="intro-greeting">
-              👋 Hey, I'm Jagadeesh Koppisetti, a Full Stack Developer.
+              👋 Hey, I'm Jagadeesh Koppisetti, a Full Stack Developer & Java Developer.
             </p>
             <p>
-              I am an aspiring <strong>Artificial Intelligence and Data Science</strong> engineer with a strong foundation in <strong>Java, Python, and Web Technologies</strong>.
+              I am an aspiring <strong>Artificial Intelligence and Data Science</strong> engineer with a strong foundation in <strong>Java, Spring Boot, Python, and Web Technologies</strong>.
             </p>
             <p>
-              I have experience building <strong>Machine Learning models</strong>, <strong>NLP tools</strong>, and <strong>Full Stack Web Applications</strong>. I enjoy solving complex problems and creating intuitive user experiences.
+              I have experience building <strong>Machine Learning models</strong>, <strong>NLP tools</strong>, and <strong>Full Stack Web Applications</strong> using Spring Boot. I enjoy solving complex problems and creating intuitive user experiences.
             </p>
           </div>
 

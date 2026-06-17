@@ -30,7 +30,7 @@ const Home = () => {
               ))}
             </h1>
           </div>
-          <h3 className="role-title">Full Stack Developer</h3>
+          <h3 className="role-title">Full Stack Developer & Java Developer</h3>
 
           <div className="social-icons">
             <a href="https://www.linkedin.com/in/jagadeesh-koppisetti-173701261/" target="_blank" rel="noopener noreferrer">
