@@ -7,12 +7,21 @@ import plantImage from '../images/plant.png';
 import mathvizImage from '../images/mathviz.png';
 import weatherImage from '../images/weather.png';
 import AgroLinkImage from '../images/AgroLink.png';
+import touristImage from '../images/tourist 1.png';
 
 
 const Projects = () => {
   const [expandedProjects, setExpandedProjects] = useState([]);
 
   const projects = [
+    {
+      title: "Tourist Safety Platform",
+      description: "A comprehensive platform ensuring tourist safety with real-time alerts, emergency assistance, and location tracking. Features include safety tips, emergency contacts, and community support for travelers.",
+      tech: ["React", "Java", "Spring Boot", "SQL", "Postman", "Geolocation API"],
+      github: "https://github.com/Jagadeesh-sys/Tourist-Safety-App",
+      demo: null,
+      image: touristImage
+    },
     {
       title: "AgroLink Farmer Marketplace",
       description: "A digital marketplace connecting farmers directly with buyers. Features real-time listings, secure transactions, and a robust backend. Deployed on Railway for high availability.",
